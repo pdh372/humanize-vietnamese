@@ -1,7 +1,7 @@
 {
   "name": "humanize-vietnamese",
   "displayName": "Humanize Vietnamese",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Viết tiếng Việt tự nhiên như người thật nói, bỏ giọng AI. Make Vietnamese text sound human.",
   "author": {
     "name": "pdh372",

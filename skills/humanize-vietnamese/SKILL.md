@@ -1,6 +1,6 @@
 ---
 name: humanize-vietnamese
-description: Viết hoặc viết lại tiếng Việt cho tự nhiên như người thật nói, bỏ "giọng AI" (sáo rỗng, dịch từ tiếng Anh, câu đều đều, trang trọng gượng). Dùng khi người dùng viết/sửa văn tiếng Việt và muốn nó mượt, có hồn, "chơn chu", "giọng người", "đỡ AI", hoặc khi soạn caption, bài đăng Facebook/TikTok, kịch bản voice, tin nhắn, email, mô tả sản phẩm bằng tiếng Việt. Also use for any request to humanize, de-AI, or make Vietnamese text sound natural.
+description: Viết hoặc viết lại tiếng Việt cho tự nhiên như người thật, bỏ giọng AI (sáo rỗng, văn dịch, câu đều đều). Dùng khi người dùng muốn văn tiếng Việt "mượt", "có hồn", "giọng người", "đỡ AI", hoặc khi soạn caption, bài đăng, kịch bản voice/TikTok, tin nhắn, email, mô tả sản phẩm bằng tiếng Việt. Also use to humanize or de-AI Vietnamese text.
 ---
 
 # Humanize Vietnamese
@@ -11,9 +11,22 @@ Viết tiếng Việt như một người Việt thật đang nói hoặc viết
 
 1. **Chốt bối cảnh trước khi viết.** Ai đọc/nghe, đăng ở đâu, giọng gì, xưng hô gì. Người dùng không nói thì dùng mặc định bên dưới, không hỏi lại trừ khi thật sự mơ hồ (ví dụ không biết là gửi sếp hay gửi bạn).
 2. **Viết hoặc viết lại.** Giữ đúng số liệu, tên riêng, ý chính. Không bịa trải nghiệm cá nhân ("mình xài rồi", "hôm qua mình thử") nếu người dùng không cung cấp.
-3. **Soát lỗi giọng AI** theo [references/ai-tells.md](references/ai-tells.md). Sửa hết những gì khớp.
+3. **Soát lỗi giọng AI.** Chạy `node scripts/lint.ts <file>` (hoặc pipe văn bản vào stdin) để bắt lỗi máy móc, rồi đối chiếu 10 dấu hiệu bên dưới. Cần chi tiết thì mở [references/ai-tells.md](references/ai-tells.md). Sửa hết những gì khớp. Không chạy được script thì tự soát bằng tay.
 4. **Đọc thầm một lượt.** Câu nào đọc vấp, câu nào ngoài đời không ai nói vậy thì viết lại.
 5. **Trả kết quả.** Chỉ đưa văn bản cuối. Không giải thích đã sửa gì trừ khi được hỏi. Người dùng xin nhiều phiên bản thì đưa 2-3 bản khác giọng rõ rệt, không phải 3 bản na ná nhau.
+
+## 10 dấu hiệu hay gặp nhất
+
+1. Câu dạo đầu sáo ("Trong thời đại...", "Bạn đã bao giờ tự hỏi...")
+2. Đoạn "Tóm lại" lặp ý, hoặc "Hy vọng bài viết hữu ích"
+3. "Không chỉ... mà còn..."
+4. Gom ba cho tròn ("nhanh, gọn và hiệu quả")
+5. Từ phóng đại (vượt trội, ấn tượng, đột phá, nâng tầm)
+6. Văn dịch: "thực hiện/tiến hành + động từ", "sở hữu", "một cách + tính từ"
+7. Danh từ hóa ("sự phát triển của", "việc... là")
+8. Từ nối dồn dập đầu câu (Bên cạnh đó, Ngoài ra, Đặc biệt)
+9. Gạch dài (—), in đậm và emoji khắp nơi
+10. Giọng chatbot ("Chắc chắn rồi!", "Dưới đây là...")
 
 ## Mặc định
 
@@ -43,6 +56,10 @@ Văn bản gốc đã có giọng riêng (xưng hô, vùng miền, độ trang t
 **Mở bằng thứ người đọc quan tâm.** Bỏ hết câu dạo đầu kiểu "Trong thời đại ngày nay". Vào thẳng vấn đề, hoặc mở bằng một câu hỏi, một con số, một tình huống.
 
 **Kết khi hết ý.** Không cần đoạn "Tóm lại" lặp lại những gì vừa nói. Không chúc "Hy vọng bài viết hữu ích".
+
+## Giữ nguyên
+
+Không đụng vào: code, đường dẫn, URL, tên riêng, số liệu, trích dẫn nguyên văn. Giữ cấu trúc gốc (tiêu đề, danh sách, thứ tự đoạn) trừ khi người dùng muốn đổi. Văn bản rất dài mà chưa rõ giọng và người đọc thì hỏi một câu ngắn trước khi viết lại.
 
 ## Độ trang trọng
 

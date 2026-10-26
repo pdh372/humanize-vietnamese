@@ -10,7 +10,7 @@
       "name": "humanize-vietnamese",
       "source": "./",
       "description": "Viết tiếng Việt tự nhiên như người thật nói, bỏ giọng AI.",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }

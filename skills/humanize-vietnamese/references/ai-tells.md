@@ -44,6 +44,11 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 | các / những đứng trước mọi danh từ | chỉ giữ khi cần nhấn số nhiều |
 | chuỗi "của": tính năng của ứng dụng của công ty | rút gọn: tính năng app bên đó |
 
+- **Danh từ hóa**: "sự phát triển của", "việc cải thiện", "quá trình xử lý". Dùng động từ: "phát triển", "cải thiện", "xử lý".
+- **Bị động thừa** (được/bị): "dữ liệu được lưu bởi hệ thống" thành "hệ thống lưu dữ liệu". "Bị" chỉ dùng khi thật sự xui.
+- **Hán-Việt dày đặc** khi nói chuyện thường: "sử dụng" thành "dùng", "tiến hành" thành "làm", "tuy nhiên" thành "nhưng", "nhằm" thành "để".
+- **Rào trước khi nói**: "Điều quan trọng cần lưu ý là", "Cần phải nhấn mạnh rằng". Nói luôn điều đó.
+
 ## 4. Cấu trúc kiểu AI
 
 - **"Không chỉ... mà còn..."** dùng hoài. Nói thẳng hai ý, hoặc chọn ý mạnh hơn.
@@ -54,6 +59,7 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - **Đổi từ đồng nghĩa liên tục** cho khỏi lặp (ứng dụng, phần mềm, công cụ, nền tảng chỉ cùng một thứ). Chọn một từ, dùng lại.
 - **Rào đón quá đà**: "có thể phần nào giúp ích được cho bạn". Viết "giúp được".
 - **"Điều đáng chú ý là / Một điều thú vị là"** trước khi nói. Nói luôn điều đó.
+- **Câu hỏi tu từ dày đặc** ("Vậy làm sao để...? Câu trả lời là...") ở mọi đoạn. Giữ một hai lần.
 
 ## 5. Trình bày
 

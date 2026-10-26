@@ -1,0 +1,30 @@
+{
+  "skill_name": "humanize-vietnamese",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Viết lại đoạn này cho tự nhiên: Trong thời đại công nghệ 4.0, ứng dụng ABC không chỉ mang lại trải nghiệm vượt trội mà còn giúp bạn quản lý chi tiêu một cách hiệu quả. Bên cạnh đó, giao diện thân thiện giúp người dùng dễ dàng làm quen.",
+      "expected_output": "Văn bản ngắn, nói thẳng, không còn câu dạo đầu, không 'không chỉ... mà còn', không 'một cách hiệu quả', không từ nối 'Bên cạnh đó'. Giữ đúng ý: quản lý chi tiêu, giao diện dễ dùng. Không bịa số liệu."
+    },
+    {
+      "id": 2,
+      "prompt": "Viết caption TikTok giới thiệu app ghi chú Notion, giọng miền Nam, xưng tui.",
+      "expected_output": "Xưng tui, vài từ Nam (nha, nè, hen), không quá tay, không bịa trải nghiệm cá nhân, không emoji đầu dòng."
+    },
+    {
+      "id": 3,
+      "prompt": "Soạn kịch bản voice 1 phút về 3 mẹo tăng năng suất.",
+      "expected_output": "Hook ở câu đầu, báo trước có ba mẹo, mỗi câu một ý, số viết thành chữ, không emoji/in đậm/gạch đầu dòng, khoảng 150-180 chữ, một lời kêu gọi duy nhất."
+    },
+    {
+      "id": 4,
+      "prompt": "Viết email báo sếp dự án trễ hai ngày vì chờ đối tác cấp key, lịch sự nhưng đừng cứng.",
+      "expected_output": "Mức lịch sự (em - anh/chị, có 'ạ'), nêu thẳng việc trễ, lý do và việc cần sếp quyết, không sáo ngữ 'rất tiếc về sự bất tiện'."
+    },
+    {
+      "id": 5,
+      "prompt": "Sửa giúp mình đoạn này, giữ nguyên code nhé: Việc sử dụng cache đóng vai trò quan trọng. ```const x = await redis.get('user:1')``` Điều này giúp giảm tải cho database.",
+      "expected_output": "Đoạn code giữ nguyên từng ký tự. Phần văn xuôi gọn, dùng động từ thật, không 'đóng vai trò quan trọng'."
+    }
+  ]
+}

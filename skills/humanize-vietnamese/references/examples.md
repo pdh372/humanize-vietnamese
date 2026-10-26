@@ -47,3 +47,54 @@
 > Anh ơi, em gửi báo cáo tiến độ tuần này ạ. Tóm gọn: xong phần đăng nhập, phần thanh toán trễ hai ngày vì chờ bên đối tác cấp key. Anh xem có cần dời mốc demo không thì báo em nhé.
 
 Đã sửa: vẫn lịch sự, nhưng nói luôn nội dung chính và việc cần anh quyết.
+
+## Review sản phẩm
+
+**Trước:**
+> Chiếc máy hút bụi Z5 mang đến trải nghiệm vệ sinh nhà cửa vô cùng tiện lợi nhờ công nghệ hiện đại. Sản phẩm sở hữu lực hút mạnh mẽ và thiết kế nhỏ gọn, là lựa chọn hoàn hảo cho mọi gia đình.
+
+**Sau:**
+> Z5 hút sạch lông mèo trên thảm, chỗ mà con cũ của mình bó tay. Nhỏ gọn, cầm một tay lau được cả cầu thang. Chỉ có tiếng ồn hơi to, hút buổi tối là hàng xóm biết liền.
+
+Đã sửa: thêm quan điểm và một điểm trừ, bỏ "hoàn hảo cho mọi gia đình". (Chi tiết "lông mèo", "con cũ" là ví dụ. Khi làm thật chỉ dùng trải nghiệm người dùng cung cấp.)
+
+## Bài LinkedIn
+
+**Trước:**
+> Tôi vui mừng chia sẻ rằng đội ngũ của chúng tôi vừa hoàn thành dự án quan trọng. Đây là một hành trình đầy thử thách nhưng cũng vô cùng ý nghĩa. Cảm ơn tất cả mọi người đã đồng hành cùng chúng tôi!
+
+**Sau:**
+> Team mình vừa ship xong hệ thống thanh toán mới sau bốn tháng. Cái khó nhất là chuyển dữ liệu cũ mà không dừng dịch vụ. Cảm ơn anh em dev và QA đã thức mấy đêm cuối.
+
+## Trả lời khách hàng (mức lịch sự)
+
+**Trước:**
+> Chúng tôi rất tiếc về sự bất tiện này. Chúng tôi sẽ tiến hành kiểm tra và phản hồi quý khách trong thời gian sớm nhất có thể. Cảm ơn quý khách đã kiên nhẫn.
+
+**Sau:**
+> Bên em xin lỗi anh/chị vì đơn bị trễ. Em đang kiểm tra với bên vận chuyển, trong chiều nay em báo lại anh/chị kết quả ạ.
+
+## Tin nhắn nhóm chat (mức thân)
+
+**Trước:**
+> Xin chào mọi người, mình xin thông báo buổi họp ngày mai sẽ được dời sang 3 giờ chiều. Mong mọi người sắp xếp thời gian tham dự đầy đủ.
+
+**Sau:**
+> Họp ngày mai dời qua 3 giờ chiều nha mọi người.
+
+## Cùng một ý, hai vùng miền
+
+Ý gốc: hẹn bạn đi cà phê cuối tuần.
+
+- **Bắc:** Cuối tuần này đi cà phê không nhỉ? Chiều thứ bảy thế nào, tớ rảnh đấy.
+- **Nam:** Cuối tuần đi cà phê hông? Chiều thứ bảy đi, tui rảnh nè.
+
+## Ví dụ làm quá tay (đừng bắt chước)
+
+**Quá tay:**
+> Ui trời ơi mọi người ơi nha, hôm qua mình mới xài thử con máy này xong là mê xỉu up xỉu down luôn á nè 😍😍
+
+Lỗi: tiểu từ dồn dập, từ lóng không ai xin, emoji thừa, và bịa trải nghiệm "hôm qua mình mới xài thử".
+
+**Vừa đủ:**
+> Con máy này nhẹ, cầm lâu không mỏi tay, pin dùng được hai ngày. Mình thấy đáng tiền.
