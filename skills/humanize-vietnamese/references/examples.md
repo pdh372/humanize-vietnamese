@@ -98,3 +98,11 @@ Lỗi: tiểu từ dồn dập, từ lóng không ai xin, emoji thừa, và bị
 
 **Vừa đủ:**
 > Con máy này nhẹ, cầm lâu không mỏi tay, pin dùng được hai ngày. Mình thấy đáng tiền.
+
+## Cùng một ý, ba giọng điệu
+
+Ý gốc: thông báo app lỗi hai tiếng.
+
+- **Nghiêm túc:** App lỗi từ 9h đến 11h sáng nay, một số đơn bị trùng. Bên mình đã hoàn tiền các đơn đó. Nếu bạn còn thấy đơn lạ, nhắn bên mình để xử lý ngay.
+- **Hài hước:** App nghỉ giải lao hai tiếng sáng nay mà quên xin phép. Đơn nào bị trùng bên mình đã hoàn tiền rồi, thấy đơn lạ thì nhắn bên mình nha.
+- **Cảm xúc:** Sáng nay app lỗi hai tiếng, nhiều bạn phải đặt lại từ đầu. Bên mình biết lúc đó ai cũng đang vội. Đơn trùng đã được hoàn tiền, cảm ơn các bạn đã chờ.

@@ -25,6 +25,16 @@
       "id": 5,
       "prompt": "Sửa giúp mình đoạn này, giữ nguyên code nhé: Việc sử dụng cache đóng vai trò quan trọng. ```const x = await redis.get('user:1')``` Điều này giúp giảm tải cho database.",
       "expected_output": "Đoạn code giữ nguyên từng ký tự. Phần văn xuôi gọn, dùng động từ thật, không 'đóng vai trò quan trọng'."
+    },
+    {
+      "id": 6,
+      "prompt": "Viết thông báo app lỗi hai tiếng, giọng nghiêm túc.",
+      "expected_output": "Nói thẳng thời gian, hậu quả, cách xử lý. Không đùa, không emoji, không 'mong bạn thông cảm' sáo."
+    },
+    {
+      "id": 7,
+      "prompt": "Viết caption hài hước về chuyện sáng nào cũng dậy trễ.",
+      "expected_output": "Hài từ tình huống, tự trêu mình, có chốt ở cuối câu. Không nhồi từ lóng hay emoji, không bịa chi tiết cá nhân ngoài ý người dùng."
     }
   ]
 }

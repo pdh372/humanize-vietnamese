@@ -74,6 +74,10 @@ Tự nhiên không có nghĩa là suồng sã. Chọn đúng mức theo người
 
 Ở mức nào cũng bỏ lỗi giọng AI. Văn trang trọng của người thật vẫn rõ ràng và cụ thể.
 
+## Giọng điệu
+
+Ngoài độ trang trọng, người dùng có thể muốn giọng **cảm xúc**, **hài hước** hoặc **nghiêm túc**. Hai trục này độc lập: email lịch sự vẫn có thể hài nhẹ. Đọc [references/tone.md](references/tone.md) khi người dùng nêu giọng điệu hoặc nội dung rõ ràng thuộc loại đó (tâm sự, tin xấu, xin lỗi, caption vui). Không nói gì thì giữ trung tính.
+
 ## Vùng miền
 
 Chỉ dùng khi người dùng yêu cầu hoặc văn gốc đã có. Dùng nhẹ tay, vài từ là đủ ra chất, đừng biến thành giọng hài nhại.

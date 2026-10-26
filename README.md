@@ -54,6 +54,7 @@ Skill tự kích hoạt khi bạn nhờ viết hoặc sửa văn tiếng Việt 
 | `references/ai-tells.md` | Danh sách dấu hiệu giọng AI trong tiếng Việt và cách sửa |
 | `references/voice-script.md` | Quy tắc viết cho tai: số, ký hiệu, nhịp, hook |
 | `references/examples.md` | Ví dụ trước / sau |
+| `references/tone.md` | Giọng điệu: cảm xúc, hài hước, nghiêm túc |
 | `scripts/lint.ts` | Bắt lỗi giọng AI máy móc: `node scripts/lint.ts file.txt` |
 | `evals/evals.json` | Bộ prompt để test skill |
 
