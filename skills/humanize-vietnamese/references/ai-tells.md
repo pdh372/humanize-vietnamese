@@ -26,7 +26,7 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - là chìa khóa, mở ra cánh cửa, bước ngoặt, đòn bẩy
 - hành trình, câu chuyện, bức tranh toàn cảnh (nghĩa bóng)
 - nâng tầm, kiến tạo, lan tỏa, chạm đến trái tim, trọn vẹn
-- đột phá, vượt trội, hoàn hảo, tuyệt vời, đáng kinh ngạc, ấn tượng (có số liệu thật đi kèm thì giữ cũng được: "vượt ngoài mong đợi, ba tháng mà lượt truy cập tăng từ 1.000 lên 15.000")
+- đột phá, vượt trội, hoàn hảo, tuyệt vời, đáng kinh ngạc, ấn tượng (có số liệu thật đi kèm trong cùng câu thì giữ được, script cũng bỏ qua: "vượt ngoài mong đợi, ba tháng mà lượt truy cập tăng từ 1.000 lên 15.000")
 - vô vàn, đỉnh cao, bùng nổ, bứt phá, cách mạng hóa, mang tính cách mạng, tiên phong, khẳng định vị thế, chinh phục
 - không ngừng nỗ lực, cầu nối, nền tảng vững chắc, trải nghiệm liền mạch, sứ mệnh, chất lượng hàng đầu, tạo ra sự khác biệt
 - hệ sinh thái, giá trị cốt lõi, giải pháp toàn diện, tối ưu hóa

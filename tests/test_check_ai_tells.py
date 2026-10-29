@@ -142,6 +142,14 @@ class Rules(unittest.TestCase):
         self.assertFalse(self.groups("Vấn đề không nằm ở database, mà nằm ở API."))
         self.assertFalse(self.groups("Với mình, gia đình là trên hết."))
 
+    def test_praise_with_number(self):
+        # Từ khen đi kèm số liệu thật thì giữ được; số dính sau chữ (tên máy) không tính
+        self.assertFalse(self.groups("Kết quả đáng kinh ngạc, ba tháng mà lượt truy cập tăng từ 1.000 lên 15.000."))
+        self.assertFalse(self.groups("Pin ấn tượng, dùng 20 tiếng mới hết."))
+        self.assertFlags("Kết quả thật đáng kinh ngạc.", "đáng kinh ngạc")
+        self.assertFlags("Tai nghe X1 có âm thanh vượt trội.", "vượt trội")
+        self.assertFlags("Máy nhẹ 1kg. Pin cũng ấn tượng.", "ấn tượng")
+
     def test_word_boundaries(self):
         # "ấn tượng" nằm trong từ khác hoặc "việc" giữa câu không được bắt nhầm
         self.assertFalse(self.groups("Công việc hôm nay xong sớm."))

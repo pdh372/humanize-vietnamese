@@ -45,6 +45,7 @@ class Rule:
     group: str
     pattern: "re.Pattern[str]"
     hint: str
+    skip_with_number: bool = False  # bỏ qua khi cùng câu có số liệu
 
 
 def _words(*phrases: str) -> str:
@@ -59,8 +60,8 @@ def _compile(regex: str) -> "re.Pattern[str]":
     return re.compile(regex, re.IGNORECASE | re.MULTILINE)
 
 
-def _rule(group: str, regex: str, hint: str) -> Rule:
-    return Rule(group, _compile(regex), hint)
+def _rule(group: str, regex: str, hint: str, skip_with_number: bool = False) -> Rule:
+    return Rule(group, _compile(regex), hint, skip_with_number)
 
 
 OPENER = "mở/kết sáo"
@@ -93,13 +94,15 @@ RULES: List[Rule] = [
     _rule(CLICHE, _words(r"đóng vai trò (?:vô cùng |cực kỳ |rất )?(?:quan trọng|then chốt)", r"không thể thiếu",
                          r"là chìa khóa", r"mở ra cánh cửa", r"bước ngoặt", r"đòn bẩy", r"bức tranh toàn cảnh",
                          r"nâng tầm", r"kiến tạo", r"lan tỏa", r"chạm đến trái tim", r"trọn vẹn",
-                         r"đột phá", r"vượt trội", r"hoàn hảo", r"đáng kinh ngạc", r"ấn tượng",
                          r"hệ sinh thái", r"giá trị cốt lõi", r"giải pháp toàn diện", r"tối ưu hóa",
                          r"đầy tiềm năng", r"đầy màu sắc", r"đa dạng và phong phú", r"như vũ bão",
                          r"sang trọng(?:,| và) tinh tế", r"hành trình (?:dài|đầy)", r"thật ý nghĩa",
                          r"nhằm nâng cao", r"góp phần (?:quan trọng|không nhỏ)", r"trong thời gian sớm nhất",
                          r"trải nghiệm (?:tuyệt vời|không tốt|người dùng tốt)"),
           "Thay bằng từ thường hoặc nói rõ cụ thể là gì"),
+    # Từ khen rỗng: có số liệu thật đi kèm trong câu thì giữ được
+    _rule(CLICHE, _words(r"đột phá", r"vượt trội", r"hoàn hảo", r"đáng kinh ngạc", r"ấn tượng"),
+          "Khen rỗng. Đưa số liệu đi kèm, hoặc thay bằng từ thường", skip_with_number=True),
     _rule(CLICHE, _words(r"vô vàn", r"đỉnh cao", r"bùng nổ", r"bứt phá", r"cách mạng hóa", r"mang tính cách mạng",
                          r"tiên phong", r"khẳng định vị thế", r"chinh phục", r"không ngừng nỗ lực", r"cầu nối",
                          r"nền tảng vững chắc", r"liền mạch", r"sứ mệnh", r"chất lượng hàng đầu",
@@ -178,6 +181,8 @@ PARTICLES = _compile(_words(r"nha", r"nhé", r"nè", r"á", r"hen", r"nhỉ"))
 EMOJI_LINE_START = _compile(r"^[ \t]*(?:[-*>][ \t]*)?(?P<hit>[\U0001F300-\U0001FAFF\u2600-\u27BF])")
 HEADING = _compile(r"^#{1,6}[ \t]+(?P<hit>.+)$")
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?…])\s+")
+# Số liệu đứng riêng (15.000, 20%, 50MP), không tính số dính sau chữ như tên máy X1
+NUMBER = re.compile(r"(?<![^\W\d_])\d")
 FENCE = re.compile(r"^\s*```")
 
 
@@ -207,6 +212,12 @@ def _paragraphs(text: str) -> Iterable[Tuple[int, str]]:
         yield m.start(), m.group(0)
 
 
+def _sentence_at(text: str, offset: int) -> str:
+    start = max(text.rfind(c, 0, offset) for c in ".!?…\n") + 1
+    ends = [i for i in (text.find(c, offset) for c in ".!?…\n") if i != -1]
+    return text[start:min(ends) if ends else len(text)]
+
+
 def _sentences(paragraph: str) -> List[str]:
     flat = re.sub(r"^[ \t]*>[ \t]?", "", paragraph, flags=re.MULTILINE).replace("\n", " ")
     return [s for s in SENTENCE_SPLIT.split(flat.strip()) if s]
@@ -227,6 +238,8 @@ def check(text: str, name: str = "<stdin>", voice: bool = False) -> List[Finding
 
     for rule in RULES + (VOICE_RULES if voice else []):
         for m in rule.pattern.finditer(scan):
+            if rule.skip_with_number and NUMBER.search(_sentence_at(scan, m.start("hit"))):
+                continue
             add_match(m, rule.group, rule.hint)
 
     connectors = list(CONNECTORS.finditer(scan))
