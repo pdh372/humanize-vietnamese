@@ -130,6 +130,8 @@ class Rules(unittest.TestCase):
             "Ra mắt nhiều model. Tin buồn cũng có.": "tin buồn cũng có",
             "Còn một tin đáng lo hơn. OpenAI bị kiện.": "còn một tin đáng lo hơn",
             "Đây cũng là lời nhắc rằng đừng tin AI hết.": "đây cũng là lời nhắc",
+            "OpenAI mới đây bị kiện bởi một gia đình ở Mỹ.": "bị kiện bởi",
+            "Thủ phạm thường không phải cục pin. Mấy app chạy ngầm mới là thứ ăn pin.": "mới là",
         }
         for text, phrase in cases.items():
             with self.subTest(text=text):

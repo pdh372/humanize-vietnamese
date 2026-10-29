@@ -115,6 +115,7 @@ RULES: List[Rule] = [
           "Chồng từ nhấn mạnh. Giữ một từ, hoặc đưa số liệu"),
     # 3. Văn dịch từ tiếng Anh
     _rule(TRANSLATED, _words(r"được(?: \w+){1,3} bởi"), "Bị động kiểu tiếng Anh. Viết: do X làm / X làm ra"),
+    _rule(TRANSLATED, _words(r"bị(?: \w+){1,3} bởi"), "Bị động kiểu tiếng Anh. Viết chủ động: X kiện OpenAI"),
     _rule(TRANSLATED, _sentence_start(r"việc"), "Bỏ \"việc\" đầu câu, dùng thẳng động từ"),
     _rule(TRANSLATED, _words(r"trong việc"), "Thường bỏ được \"trong việc\""),
     _rule(TRANSLATED, _words(r"một cách \w+"), "\"một cách nhanh chóng\" thành \"nhanh\""),
@@ -152,6 +153,8 @@ RULES: List[Rule] = [
           "Câu chuyển ý công thức. Bỏ, nối thẳng vào chuyện"),
     _rule(STRUCTURE, _words(r"đây (?:cũng )?là (?:một )?lời nhắc", r"bài học rút ra(?: ở đây)? là"),
           "Câu kết bài học thêm cho tròn bài. Hết ý thì dừng"),
+    _rule(STRUCTURE, "(?P<hit>" + W + r"không phải (?:là )?[^.!?\n]{1,40}[.!?]\s+[^.!?\n]{1,80}?" + W + r"mới là" + E + ")",
+          "Lật ngược kiểu \"Không phải X. Y mới là...\" nghe kịch. Nói thẳng Y"),
     _rule(STRUCTURE, _words(r"câu trả lời là:"), "Giật gân bằng dấu hai chấm. Nói thẳng câu trả lời"),
     _rule(STRUCTURE, _words(r"có thể phần nào", r"phần nào giúp"), "Rào đón quá đà. Viết \"giúp được\""),
     # 5. Trình bày

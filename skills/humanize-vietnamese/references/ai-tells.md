@@ -40,6 +40,7 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 | Gặp | Sửa |
 |---|---|
 | được phát triển bởi Google | do Google làm / Google làm ra |
+| OpenAI bị kiện bởi một gia đình | Một gia đình kiện OpenAI |
 | việc sử dụng điện thoại quá nhiều sẽ... | dùng điện thoại nhiều quá thì... |
 | một cách nhanh chóng / hiệu quả / dễ dàng | nhanh / hiệu quả / dễ |
 | thực hiện / tiến hành + động từ | dùng thẳng động từ đó |
@@ -74,11 +75,12 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - **"Điều đáng chú ý là / Một điều thú vị là"** trước khi nói. Nói luôn điều đó.
 - **Câu dẫn thừa**: Cần lưu ý rằng, Điều quan trọng cần nhớ, Không thể phủ nhận rằng, Nói cách khác. Nói luôn ý chính.
 - **"Hãy tưởng tượng..."** để mở bài. Kể tình huống thật, hoặc hỏi thẳng.
-- **"Không phải X, mà là Y"** dùng hoài cho kịch tính. Một lần cho có điểm nhấn thì được, nhiều lần thì nói thẳng Y.
+- **"Không phải X, mà là Y"** dùng hoài cho kịch tính. Một lần cho có điểm nhấn thì được, nhiều lần thì nói thẳng Y. Dạng tách hai câu cũng vậy: "Thủ phạm không phải cục pin. App chạy ngầm mới là thứ ăn pin" thành "Mấy app chạy ngầm ăn pin rất nhiều".
 - **"Câu trả lời là:"** giật gân bằng dấu hai chấm. Nói thẳng câu trả lời.
 - **Kể đều theo khuôn danh sách**: "X mở màn... Y thì... Cuối tháng tới lượt Z". Đọc như AI đang tổng hợp từng mục. Gom mấy ý nhỏ vào một câu, đưa ý đáng chú ý nhất lên trước.
 - **Câu chuyển ý công thức** đứng riêng: "Tin buồn cũng có.", "Còn một tin đáng lo hơn.", "Nhưng đó chưa phải tất cả." Bỏ, nối thẳng vào chuyện.
 - **Câu kết bài học, khuyến cáo** thêm cho tròn bài: "Đây là lời nhắc rằng...", "Bài học rút ra là...". Hết ý thì dừng.
+- **Câu hứa kết quả không có căn cứ**: "Làm hai việc đó thôi là pin trụ lâu hơn thấy rõ". Không có số liệu hay nguồn thì bỏ.
 
 ## 5. Trình bày
 
