@@ -116,6 +116,17 @@ class Rules(unittest.TestCase):
             "Pin tốt — sạc nhanh.": "—",
             "Hy vọng bài viết hữu ích với bạn.": "hy vọng bài viết",
             "Khum biết nữa.": "khum",
+            "Như chúng ta đã biết, nước chiếm 70% cơ thể.": "như chúng ta đã biết",
+            "Ngày nay, mạng xã hội ngày càng phổ biến.": "ngày nay,",
+            "Thị trường thương mại điện tử đang bùng nổ.": "bùng nổ",
+            "Xin chân thành cảm ơn quý khách đã tin tưởng!": "xin chân thành cảm ơn",
+            "Trong bối cảnh kinh tế khó khăn, nhiều công ty cắt giảm nhân sự.": "trong bối cảnh",
+            "Đối với tôi, gia đình là quan trọng nhất.": "đối với tôi",
+            "Đây không phải là một chiếc điện thoại, mà là một người bạn.": "mà là",
+            "Vậy bí quyết là gì? Câu trả lời là: kiên trì.": "câu trả lời là:",
+            "Tuyệt vời! Mình sẽ giúp bạn viết lại.": "tuyệt vời!",
+            "Rất vui được hỗ trợ bạn!": "rất vui được hỗ trợ",
+            "Món này đỉnh của chóp luôn.": "đỉnh của chóp",
         }
         for text, phrase in cases.items():
             with self.subTest(text=text):
@@ -124,6 +135,12 @@ class Rules(unittest.TestCase):
     def test_sentence_start_only(self):
         self.assertFlags("Việc này để mai làm.", "việc")
         self.assertFalse(self.groups("Mai mình làm nốt việc này."))
+
+    def test_new_rules_keep_normal_text(self):
+        # "Tuyệt vời," trong văn châm biếm và "mà nằm ở" không phải lỗi
+        self.assertFalse(self.groups("Tuyệt vời, deploy xong là cả team được nghỉ."))
+        self.assertFalse(self.groups("Vấn đề không nằm ở database, mà nằm ở API."))
+        self.assertFalse(self.groups("Với mình, gia đình là trên hết."))
 
     def test_word_boundaries(self):
         # "ấn tượng" nằm trong từ khác hoặc "việc" giữa câu không được bắt nhầm

@@ -81,7 +81,7 @@ Khi văn bản sẽ được đọc thành tiếng (TTS, lồng tiếng, TikTok,
 Làm "người" quá cũng lộ. Các lỗi hay gặp khi cố humanize:
 
 - Nhét tiểu từ vào mọi câu ("nha", "nè", "á" liên tục)
-- Từ lóng Gen Z không ai xin ("khum", "xỉu up xỉu down", "keo lỳ") trong văn không phải để giới trẻ đọc
+- Từ lóng Gen Z không ai xin ("khum", "xỉu up xỉu down", "keo lỳ", "đỉnh của chóp", "mãi mận") trong văn không phải để giới trẻ đọc
 - Thêm câu cảm thán và emoji cho "vui"
 - Bịa kỷ niệm, trải nghiệm để có vẻ chân thật
 - Đổi luôn ý hoặc bỏ dữ kiện của người dùng cho câu mượt hơn
