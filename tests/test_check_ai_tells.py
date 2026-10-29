@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SKILL = ROOT / "skills" / "humanize-vietnamese"
 SCRIPT = SKILL / "scripts" / "check_ai_tells.py"
 EXAMPLES = SKILL / "references" / "examples.md"
+STYLES = SKILL / "references" / "styles.md"
 
 sys.path.insert(0, str(SCRIPT.parent))
 import check_ai_tells  # noqa: E402
@@ -69,6 +70,30 @@ class ExamplesAgreeWithChecker(unittest.TestCase):
             with self.subTest(heading=heading):
                 findings = check_ai_tells.check(text, voice=voice)
                 self.assertEqual([], [(f.group, f.match) for f in findings], f"Bản Sau vẫn bị bắt lỗi: {heading}")
+
+
+class StylesAgreeWithChecker(unittest.TestCase):
+    def sections(self):
+        """Trả về list (tiêu đề, ví dụ trong blockquote) từ styles.md."""
+        out = []
+        for part in re.split(r"^## ", STYLES.read_text(encoding="utf-8"), flags=re.MULTILINE)[1:]:
+            heading = part.splitlines()[0].strip()
+            quote = "\n".join(re.sub(r"^>\s?", "", l) for l in part.splitlines() if l.startswith(">"))
+            out.append((heading, quote))
+        return out
+
+    def test_ten_styles_each_with_example(self):
+        sections = self.sections()
+        self.assertEqual(10, len(sections))
+        for heading, quote in sections:
+            with self.subTest(heading=heading):
+                self.assertTrue(quote.strip(), f"Thiếu ví dụ: {heading}")
+
+    def test_examples_are_clean(self):
+        for heading, quote in self.sections():
+            with self.subTest(heading=heading):
+                findings = check_ai_tells.check(quote)
+                self.assertEqual([], [(f.group, f.match) for f in findings], f"Ví dụ vẫn bị bắt lỗi: {heading}")
 
 
 class Rules(unittest.TestCase):

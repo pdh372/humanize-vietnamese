@@ -45,6 +45,7 @@ Skill tự kích hoạt khi bạn nhờ viết hoặc sửa văn tiếng Việt 
 - `Viết caption TikTok giới thiệu app này, giọng miền Nam, xưng tui`
 - `Soạn kịch bản voice một phút về 3 tin công nghệ tuần này`
 - `Viết email báo sếp dự án trễ hai ngày, lịch sự nhưng đừng cứng`
+- `Viết lại đoạn này theo văn phong cà khịa: ...`
 
 ## Nội dung
 
@@ -52,6 +53,7 @@ Skill tự kích hoạt khi bạn nhờ viết hoặc sửa văn tiếng Việt 
 |---|---|
 | `skills/humanize-vietnamese/SKILL.md` | Quy trình, giọng mặc định, độ trang trọng, vùng miền |
 | `references/ai-tells.md` | Danh sách dấu hiệu giọng AI trong tiếng Việt và cách sửa |
+| `references/styles.md` | 10 kiểu văn phong: đời thường, cà khịa, kể chuyện, chuyên nghiệp, học thuật... |
 | `references/voice-script.md` | Quy tắc viết cho tai: số, ký hiệu, nhịp, hook |
 | `references/examples.md` | Ví dụ trước / sau |
 | `scripts/check_ai_tells.py` | Script quét dấu hiệu giọng AI, chỉ cần Python 3.8+, không cài thêm gì |
