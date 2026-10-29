@@ -76,6 +76,9 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - **"Hãy tưởng tượng..."** để mở bài. Kể tình huống thật, hoặc hỏi thẳng.
 - **"Không phải X, mà là Y"** dùng hoài cho kịch tính. Một lần cho có điểm nhấn thì được, nhiều lần thì nói thẳng Y.
 - **"Câu trả lời là:"** giật gân bằng dấu hai chấm. Nói thẳng câu trả lời.
+- **Kể đều theo khuôn danh sách**: "X mở màn... Y thì... Cuối tháng tới lượt Z". Đọc như AI đang tổng hợp từng mục. Gom mấy ý nhỏ vào một câu, đưa ý đáng chú ý nhất lên trước.
+- **Câu chuyển ý công thức** đứng riêng: "Tin buồn cũng có.", "Còn một tin đáng lo hơn.", "Nhưng đó chưa phải tất cả." Bỏ, nối thẳng vào chuyện.
+- **Câu kết bài học, khuyến cáo** thêm cho tròn bài: "Đây là lời nhắc rằng...", "Bài học rút ra là...". Hết ý thì dừng.
 
 ## 5. Trình bày
 
@@ -96,3 +99,8 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - "Hy vọng điều này giúp ích cho bạn", "Nếu bạn có bất kỳ câu hỏi nào..."
 
 Xóa hết.
+
+## 7. Tin tức và chuyện chưa xác minh
+
+- **Viết cáo buộc như sự thật.** "Gia đình kiện vì ChatGPT đã tư vấn sai" là kết luận thay tòa. Viết "cáo buộc", "theo đơn kiện", và nói rõ nếu chưa có kết luận.
+- **Số liệu các nguồn nói khác nhau** thì bỏ, hoặc ghi rõ nguồn nào nói số nào. Đừng chọn đại một số.

@@ -127,6 +127,9 @@ class Rules(unittest.TestCase):
             "Tuyệt vời! Mình sẽ giúp bạn viết lại.": "tuyệt vời!",
             "Rất vui được hỗ trợ bạn!": "rất vui được hỗ trợ",
             "Món này đỉnh của chóp luôn.": "đỉnh của chóp",
+            "Ra mắt nhiều model. Tin buồn cũng có.": "tin buồn cũng có",
+            "Còn một tin đáng lo hơn. OpenAI bị kiện.": "còn một tin đáng lo hơn",
+            "Đây cũng là lời nhắc rằng đừng tin AI hết.": "đây cũng là lời nhắc",
         }
         for text, phrase in cases.items():
             with self.subTest(text=text):

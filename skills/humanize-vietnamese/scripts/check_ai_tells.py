@@ -147,6 +147,11 @@ RULES: List[Rule] = [
     _rule(STRUCTURE, _sentence_start(r"nói cách khác", r"hãy tưởng tượng"), "Bỏ, hoặc kể tình huống thật"),
     _rule(STRUCTURE, "(?P<hit>" + W + r"không phải (?:là )?[^.!?\n]{1,60}?, mà là" + E + ")",
           "\"Không phải X, mà là Y\" dùng hoài thành kịch. Nói thẳng Y"),
+    _rule(STRUCTURE, _sentence_start(r"tin buồn cũng có", r"còn một tin (?:đáng lo|đáng chú ý|buồn) hơn",
+                                     r"(?:nhưng )?đó chưa phải (?:là )?tất cả"),
+          "Câu chuyển ý công thức. Bỏ, nối thẳng vào chuyện"),
+    _rule(STRUCTURE, _words(r"đây (?:cũng )?là (?:một )?lời nhắc", r"bài học rút ra(?: ở đây)? là"),
+          "Câu kết bài học thêm cho tròn bài. Hết ý thì dừng"),
     _rule(STRUCTURE, _words(r"câu trả lời là:"), "Giật gân bằng dấu hai chấm. Nói thẳng câu trả lời"),
     _rule(STRUCTURE, _words(r"có thể phần nào", r"phần nào giúp"), "Rào đón quá đà. Viết \"giúp được\""),
     # 5. Trình bày
