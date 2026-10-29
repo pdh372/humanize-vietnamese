@@ -1,0 +1,14 @@
+{
+  "name": "humanize-vietnamese",
+  "displayName": "Humanize Vietnamese",
+  "version": "0.0.1",
+  "description": "Viết tiếng Việt tự nhiên như người thật nói, bỏ giọng AI. Make Vietnamese text sound human.",
+  "author": {
+    "name": "pdh372",
+    "url": "https://github.com/pdh372"
+  },
+  "homepage": "https://github.com/pdh372/humanize-vietnamese",
+  "repository": "https://github.com/pdh372/humanize-vietnamese",
+  "license": "MIT",
+  "keywords": ["vietnamese", "tiếng việt", "humanize", "writing", "unslop", "voice-script"]
+}

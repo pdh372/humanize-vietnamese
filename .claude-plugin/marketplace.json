@@ -1,0 +1,16 @@
+{
+  "name": "humanize-vietnamese",
+  "owner": {
+    "name": "pdh372",
+    "url": "https://github.com/pdh372"
+  },
+  "description": "Skill viết tiếng Việt tự nhiên cho Claude Code và GitHub Copilot.",
+  "plugins": [
+    {
+      "name": "humanize-vietnamese",
+      "source": "./",
+      "description": "Viết tiếng Việt tự nhiên như người thật nói, bỏ giọng AI.",
+      "version": "0.0.1"
+    }
+  ]
+}
