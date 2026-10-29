@@ -62,7 +62,7 @@ Tự nhiên không có nghĩa là suồng sã. Chọn đúng mức theo người
 
 Độ trang trọng là nói với ai, văn phong là nói để làm gì: cho người ta cười, hiểu, tin, hay làm theo. Có 10 kiểu hay gặp: đời thường, hài hước cà khịa, kể chuyện, giải thích, phân tích lập luận, chuyên nghiệp, học thuật, cảm xúc, thuyết phục, châm biếm mỉa mai.
 
-Người dùng nêu kiểu nào (hoặc mô tả kiểu "viết cho vui", "viết như kể chuyện", "viết để chốt sale") thì đọc mục đó trong [references/styles.md](references/styles.md) trước khi viết. Một bài trộn tối đa hai kiểu.
+Người dùng nêu kiểu nào thì dùng kiểu đó. Không nêu thì tự chọn theo mục "Chọn văn phong" trong [references/styles.md](references/styles.md): viết lại thì giữ văn phong gốc, viết mới thì chọn theo mục đích rồi chỉnh theo nơi đăng. Đọc mục của kiểu đã chọn trong file đó trước khi viết. Một bài trộn tối đa hai kiểu.
 
 ## Vùng miền
 

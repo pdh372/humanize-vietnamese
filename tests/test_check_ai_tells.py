@@ -76,7 +76,7 @@ class StylesAgreeWithChecker(unittest.TestCase):
     def sections(self):
         """Trả về list (tiêu đề, ví dụ trong blockquote) từ styles.md."""
         out = []
-        for part in re.split(r"^## ", STYLES.read_text(encoding="utf-8"), flags=re.MULTILINE)[1:]:
+        for part in re.split(r"^## (?=\d+\.)", STYLES.read_text(encoding="utf-8"), flags=re.MULTILINE)[1:]:
             heading = part.splitlines()[0].strip()
             quote = "\n".join(re.sub(r"^>\s?", "", l) for l in part.splitlines() if l.startswith(">"))
             out.append((heading, quote))

@@ -2,7 +2,7 @@
 
 Độ trang trọng là nói với ai. Văn phong là nói để làm gì: cho người ta cười, hiểu, tin, hay làm theo. Hai cái độc lập nhau: Phân tích có thể viết ở mức Thân khi chat với bạn, hoặc mức Trang trọng khi làm báo cáo.
 
-Người dùng không nói thì dùng Đời thường. Một bài thường trộn hai kiểu, ví dụ Giải thích với Đời thường cho blog kỹ thuật, Kể chuyện với Cảm xúc cho bài đăng cá nhân. Trộn quá hai là loạn giọng. Người dùng xin nhiều phiên bản thì cho mỗi bản một kiểu.
+Người dùng nói rõ kiểu nào thì dùng kiểu đó. Không nói thì tự chọn theo mục "Chọn văn phong" bên dưới. Người dùng xin nhiều phiên bản thì cho mỗi bản một kiểu.
 
 Kiểu nào cũng phải bỏ lỗi giọng AI trong [ai-tells.md](ai-tells.md). Mỗi kiểu bên dưới có thêm mục "Dễ lộ AI" là mấy lỗi riêng hay gặp khi viết kiểu đó.
 
@@ -18,6 +18,46 @@ Kiểu nào cũng phải bỏ lỗi giọng AI trong [ai-tells.md](ai-tells.md).
 | 8. Cảm xúc | Bộc lộ tâm trạng, tạo đồng cảm | bài tâm sự, thư cảm ơn, lời chia tay |
 | 9. Thuyết phục | Đánh vào nhu cầu, lợi ích, niềm tin | landing page, bán hàng, xin ngân sách |
 | 10. Châm biếm, mỉa mai | Dùng sự đối lập để tạo ý nghĩa | bình luận, bài quan điểm |
+
+## Chọn văn phong
+
+**Viết lại văn có sẵn thì giữ văn phong gốc.** Nhận ra nó qua dấu hiệu dưới đây, rồi chỉ bỏ giọng AI. Đổi sang kiểu khác khi người dùng xin, hoặc khi kiểu gốc rõ ràng sai chỗ (email gửi khách mà viết cà khịa).
+
+| Văn gốc có | Thường là |
+|---|---|
+| xưng tui, mình; tiểu từ; câu hỏi bâng quơ | Đời thường |
+| câu bẻ ngoặt ở cuối, so sánh bất ngờ | Hài hước, cà khịa |
+| mốc thời gian, "hôm đó", diễn biến trước sau | Kể chuyện |
+| "hiểu đơn giản là", định nghĩa kèm ví dụ | Giải thích |
+| kết luận rồi "vì", số liệu, so sánh hai bên | Phân tích, lập luận |
+| đủ chủ vị, mốc thời gian, "bên em", "anh/chị" | Chuyên nghiệp |
+| thuật ngữ, trích nguồn, thống kê, "chúng tôi" | Học thuật |
+| tâm trạng, câu ngắn ngắt quãng, nói với "bạn" | Cảm xúc |
+| nỗi đau người đọc, lợi ích, lời kêu gọi | Thuyết phục |
+| khen mà ý là chê | Châm biếm, mỉa mai |
+
+**Viết mới thì chọn theo mục đích, rồi chỉnh theo nơi đăng.** Mục đích cho ra kiểu chính:
+
+| Người dùng cần | Kiểu chính |
+|---|---|
+| giải thích, hướng dẫn, trả lời "là gì", "sao lại" | Giải thích |
+| so sánh, review, khuyên nên chọn cái nào, đề xuất | Phân tích, lập luận |
+| email sếp, khách, đối tác; báo cáo; thông báo | Chuyên nghiệp |
+| tiểu luận, luận văn, bài báo, tóm tắt nghiên cứu | Học thuật |
+| bán hàng, landing page, xin ngân sách, kêu gọi đăng ký | Thuyết phục |
+| kể lại sự cố, kinh nghiệm, video có diễn biến | Kể chuyện |
+| tâm sự, cảm ơn, chia tay, động viên | Cảm xúc |
+| meme, caption vui, "viết cho vui", "cà khịa" | Hài hước, cà khịa |
+| phê phán một thói quen, cách làm | Châm biếm, mỉa mai |
+| caption, tin nhắn, bài đăng cá nhân, không rõ mục đích | Đời thường |
+
+Nơi đăng cho ra kiểu phụ, nếu cần: Facebook, TikTok, nhóm chat thì thêm Đời thường; LinkedIn, email thì thêm Chuyên nghiệp. Ví dụ: hướng dẫn đăng TikTok là Giải thích với Đời thường, bài LinkedIn kể chuyện đổi việc là Kể chuyện với Chuyên nghiệp. Trộn quá hai kiểu là loạn giọng.
+
+**Mấy chỗ cần cẩn thận:**
+
+- Không dùng Hài hước, cà khịa hay Châm biếm với khách hàng, sếp, thông báo chính thức, hoặc chủ đề nhạy cảm (tang lễ, bệnh tật, sự cố gây thiệt hại), trừ khi người dùng xin rõ.
+- Đoán không ra vì thiếu thông tin quyết định giọng (gửi sếp hay gửi bạn, để bán hay để chia sẻ) thì hỏi một câu ngắn. Đoán được thì đừng hỏi.
+- Không cần nói với người dùng là đã chọn kiểu gì, trừ khi họ hỏi hoặc đang xin nhiều phiên bản.
 
 ## 1. Đời thường
 
