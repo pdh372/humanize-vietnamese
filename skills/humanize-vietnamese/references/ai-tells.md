@@ -9,10 +9,13 @@ Có thể chạy [../scripts/check_ai_tells.py](../scripts/check_ai_tells.py) đ
 | Gặp | Sửa |
 |---|---|
 | Trong thời đại công nghệ 4.0 / kỷ nguyên số / xã hội hiện đại ngày nay | Xóa. Vào thẳng vấn đề |
-| Bạn đã bao giờ tự hỏi...? | Hỏi thẳng câu hỏi thật, hoặc xóa |
+| Bạn đã bao giờ tự hỏi...? | Hỏi thẳng câu hỏi thật, thêm tiểu từ cho khỏi cộc ("Sao điện thoại mình hết pin nhanh vậy ta?"), hoặc xóa |
+| Như chúng ta đã biết / Không có gì ngạc nhiên khi | Xóa |
+| Ngày nay, ... / Trong bài viết này, mình sẽ... | Xóa, vào thẳng nội dung |
 | Hãy cùng tìm hiểu / cùng khám phá trong bài viết dưới đây | Xóa |
 | Tóm lại / Nhìn chung / Có thể nói / Nói tóm lại (rồi lặp lại ý cũ) | Xóa cả đoạn tóm tắt nếu không thêm ý mới |
-| Hy vọng bài viết hữu ích / Chúc bạn thành công | Xóa, hoặc thay bằng một lời kêu gọi cụ thể |
+| Hy vọng bài viết hữu ích / Chúc bạn thành công / Cảm ơn bạn đã dành thời gian đọc | Xóa, hoặc thay bằng một lời kêu gọi cụ thể |
+| Hãy để lại bình luận bên dưới | Hỏi một câu cụ thể ("Bạn đang dùng app nào?") |
 | Tương lai đầy hứa hẹn / chắc chắn sẽ còn phát triển hơn nữa | Nêu kế hoạch, mốc thời gian cụ thể, hoặc xóa |
 
 ## 2. Từ ngữ sáo, phóng đại
@@ -23,10 +26,13 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - là chìa khóa, mở ra cánh cửa, bước ngoặt, đòn bẩy
 - hành trình, câu chuyện, bức tranh toàn cảnh (nghĩa bóng)
 - nâng tầm, kiến tạo, lan tỏa, chạm đến trái tim, trọn vẹn
-- đột phá, vượt trội, hoàn hảo, tuyệt vời, đáng kinh ngạc, ấn tượng
+- đột phá, vượt trội, hoàn hảo, tuyệt vời, đáng kinh ngạc, ấn tượng (có số liệu thật đi kèm trong cùng câu thì giữ được, script cũng bỏ qua: "vượt ngoài mong đợi, ba tháng mà lượt truy cập tăng từ 1.000 lên 15.000")
+- vô vàn, đỉnh cao, bùng nổ, bứt phá, cách mạng hóa, mang tính cách mạng, tiên phong, khẳng định vị thế, chinh phục
+- không ngừng nỗ lực, cầu nối, nền tảng vững chắc, trải nghiệm liền mạch, sứ mệnh, chất lượng hàng đầu, tạo ra sự khác biệt
 - hệ sinh thái, giá trị cốt lõi, giải pháp toàn diện, tối ưu hóa
 - đầy tiềm năng, đầy màu sắc, đa dạng và phong phú
 - nhằm nâng cao, góp phần quan trọng, trong thời gian sớm nhất, mang lại trải nghiệm tuyệt vời (văn công sở, chăm sóc khách hàng)
+- xin trân trọng thông báo, rất mong nhận được sự quan tâm, xin chân thành cảm ơn, sự hài lòng của khách hàng là ưu tiên hàng đầu, đáp ứng nhu cầu ngày càng cao
 - vô cùng / cực kỳ / thực sự / hoàn toàn chồng lên nhau ("thực sự vô cùng ấn tượng")
 
 ## 3. Văn dịch từ tiếng Anh
@@ -34,6 +40,7 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 | Gặp | Sửa |
 |---|---|
 | được phát triển bởi Google | do Google làm / Google làm ra |
+| OpenAI bị kiện bởi một gia đình | Một gia đình kiện OpenAI |
 | việc sử dụng điện thoại quá nhiều sẽ... | dùng điện thoại nhiều quá thì... |
 | một cách nhanh chóng / hiệu quả / dễ dàng | nhanh / hiệu quả / dễ |
 | thực hiện / tiến hành + động từ | dùng thẳng động từ đó |
@@ -46,6 +53,15 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 | trở nên + tính từ | thường bỏ được "trở nên" |
 | các / những đứng trước mọi danh từ | chỉ giữ khi cần nhấn số nhiều |
 | chuỗi "của": tính năng của ứng dụng của công ty | rút gọn: tính năng app bên đó |
+| đây là lý do tại sao | Vì vậy, Thế nên |
+| có một số cách để... | nói luôn số: Có ba cách |
+| ở mức độ cao | rất, nhiều |
+| Đối với tôi, ... | Với mình, ... |
+| với sự hỗ trợ của | nhờ, có X giúp |
+| trong bối cảnh | khi, lúc |
+| nhằm mục đích | để |
+| sự phát triển của công nghệ (sự + động từ) | công nghệ phát triển |
+| đóng góp vào | giúp |
 
 ## 4. Cấu trúc kiểu AI
 
@@ -57,6 +73,14 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - **Đổi từ đồng nghĩa liên tục** cho khỏi lặp (ứng dụng, phần mềm, công cụ, nền tảng chỉ cùng một thứ). Chọn một từ, dùng lại.
 - **Rào đón quá đà**: "có thể phần nào giúp ích được cho bạn". Viết "giúp được".
 - **"Điều đáng chú ý là / Một điều thú vị là"** trước khi nói. Nói luôn điều đó.
+- **Câu dẫn thừa**: Cần lưu ý rằng, Điều quan trọng cần nhớ, Không thể phủ nhận rằng, Nói cách khác. Nói luôn ý chính.
+- **"Hãy tưởng tượng..."** để mở bài. Kể tình huống thật, hoặc hỏi thẳng.
+- **"Không phải X, mà là Y"** dùng hoài cho kịch tính. Một lần cho có điểm nhấn thì được, nhiều lần thì nói thẳng Y. Dạng tách hai câu cũng vậy: "Thủ phạm không phải cục pin. App chạy ngầm mới là thứ ăn pin" thành "Mấy app chạy ngầm ăn pin rất nhiều".
+- **"Câu trả lời là:"** giật gân bằng dấu hai chấm. Nói thẳng câu trả lời.
+- **Kể đều theo khuôn danh sách**: "X mở màn... Y thì... Cuối tháng tới lượt Z". Đọc như AI đang tổng hợp từng mục. Gom mấy ý nhỏ vào một câu, đưa ý đáng chú ý nhất lên trước.
+- **Câu chuyển ý công thức** đứng riêng: "Tin buồn cũng có.", "Còn một tin đáng lo hơn.", "Nhưng đó chưa phải tất cả." Bỏ, nối thẳng vào chuyện.
+- **Câu kết bài học, khuyến cáo** thêm cho tròn bài: "Đây là lời nhắc rằng...", "Bài học rút ra là...". Hết ý thì dừng.
+- **Câu hứa kết quả không có căn cứ**: "Làm hai việc đó thôi là pin trụ lâu hơn thấy rõ". Không có số liệu hay nguồn thì bỏ.
 
 ## 5. Trình bày
 
@@ -73,5 +97,12 @@ Thay bằng từ thường hoặc nói rõ cụ thể là gì:
 - "Dưới đây là...", "Sau đây mình sẽ..."
 - "Nếu bạn cần thêm thông tin, đừng ngần ngại..."
 - Xưng "chúng ta" khi đang nói một chiều với người đọc
+- "Tuyệt vời!" mở đầu câu trả lời, "Mình hiểu cảm giác của bạn", "Rất vui được hỗ trợ bạn"
+- "Hy vọng điều này giúp ích cho bạn", "Nếu bạn có bất kỳ câu hỏi nào..."
 
 Xóa hết.
+
+## 7. Tin tức và chuyện chưa xác minh
+
+- **Viết cáo buộc như sự thật.** "Gia đình kiện vì ChatGPT đã tư vấn sai" là kết luận thay tòa. Viết "cáo buộc", "theo đơn kiện", và nói rõ nếu chưa có kết luận.
+- **Số liệu các nguồn nói khác nhau** thì bỏ, hoặc ghi rõ nguồn nào nói số nào. Đừng chọn đại một số.

@@ -45,6 +45,7 @@ class Rule:
     group: str
     pattern: "re.Pattern[str]"
     hint: str
+    skip_with_number: bool = False  # bỏ qua khi cùng câu có số liệu
 
 
 def _words(*phrases: str) -> str:
@@ -59,8 +60,8 @@ def _compile(regex: str) -> "re.Pattern[str]":
     return re.compile(regex, re.IGNORECASE | re.MULTILINE)
 
 
-def _rule(group: str, regex: str, hint: str) -> Rule:
-    return Rule(group, _compile(regex), hint)
+def _rule(group: str, regex: str, hint: str, skip_with_number: bool = False) -> Rule:
+    return Rule(group, _compile(regex), hint, skip_with_number)
 
 
 OPENER = "mở/kết sáo"
@@ -82,23 +83,39 @@ RULES: List[Rule] = [
           "Đoạn tóm tắt không thêm ý mới thì xóa"),
     _rule(OPENER, _words(r"h[yi] vọng (?:bài viết|những chia sẻ|thông tin|báo cáo)", r"chúc (?:bạn|các bạn) thành công"),
           "Xóa, hoặc thay bằng một lời kêu gọi cụ thể"),
+    _rule(OPENER, _words(r"như (?:chúng ta|mọi người|các bạn) đã biết", r"không có gì (?:ngạc nhiên|lạ) khi",
+                         r"trong bài viết này", r"cảm ơn (?:bạn|các bạn|mọi người) đã (?:dành thời gian )?(?:đọc|theo dõi)",
+                         r"(?:hãy )?để lại bình luận(?: bên dưới| phía dưới)?"),
+          "Câu dẫn hoặc câu kết khuôn mẫu. Xóa, hoặc hỏi một câu cụ thể"),
+    _rule(OPENER, _sentence_start(r"ngày nay,"), "Mở bài văn mẫu. Xóa, vào thẳng vấn đề"),
     _rule(OPENER, _words(r"tương lai đầy hứa hẹn", r"(?:sẽ )?(?:còn )?phát triển hơn nữa"),
           "Nêu kế hoạch, mốc thời gian cụ thể, hoặc xóa"),
     # 2. Từ ngữ sáo, phóng đại
     _rule(CLICHE, _words(r"đóng vai trò (?:vô cùng |cực kỳ |rất )?(?:quan trọng|then chốt)", r"không thể thiếu",
                          r"là chìa khóa", r"mở ra cánh cửa", r"bước ngoặt", r"đòn bẩy", r"bức tranh toàn cảnh",
                          r"nâng tầm", r"kiến tạo", r"lan tỏa", r"chạm đến trái tim", r"trọn vẹn",
-                         r"đột phá", r"vượt trội", r"hoàn hảo", r"đáng kinh ngạc", r"ấn tượng",
                          r"hệ sinh thái", r"giá trị cốt lõi", r"giải pháp toàn diện", r"tối ưu hóa",
                          r"đầy tiềm năng", r"đầy màu sắc", r"đa dạng và phong phú", r"như vũ bão",
                          r"sang trọng(?:,| và) tinh tế", r"hành trình (?:dài|đầy)", r"thật ý nghĩa",
                          r"nhằm nâng cao", r"góp phần (?:quan trọng|không nhỏ)", r"trong thời gian sớm nhất",
                          r"trải nghiệm (?:tuyệt vời|không tốt|người dùng tốt)"),
           "Thay bằng từ thường hoặc nói rõ cụ thể là gì"),
+    # Từ khen rỗng: có số liệu thật đi kèm trong câu thì giữ được
+    _rule(CLICHE, _words(r"đột phá", r"vượt trội", r"hoàn hảo", r"đáng kinh ngạc", r"ấn tượng"),
+          "Khen rỗng. Đưa số liệu đi kèm, hoặc thay bằng từ thường", skip_with_number=True),
+    _rule(CLICHE, _words(r"vô vàn", r"đỉnh cao", r"bùng nổ", r"bứt phá", r"cách mạng hóa", r"mang tính cách mạng",
+                         r"tiên phong", r"khẳng định vị thế", r"chinh phục", r"không ngừng nỗ lực", r"cầu nối",
+                         r"nền tảng vững chắc", r"liền mạch", r"sứ mệnh", r"chất lượng hàng đầu",
+                         r"tạo (?:ra )?sự khác biệt"),
+          "Từ to mà rỗng. Thay bằng từ thường hoặc nói rõ cụ thể là gì"),
+    _rule(CLICHE, _words(r"(?:xin )?trân trọng thông báo", r"rất mong nhận được sự (?:quan tâm|ủng hộ|hợp tác)",
+                         r"(?:xin )?chân thành cảm ơn", r"sự hài lòng của khách hàng", r"nhu cầu ngày càng cao"),
+          "Văn công sở khuôn mẫu. Nói thẳng, hoặc nêu cam kết cụ thể"),
     _rule(CLICHE, _words(r"(?:thực sự|vô cùng|cực kỳ|hoàn toàn|rất) (?:vô cùng|cực kỳ|rất|hoàn toàn|thực sự)"),
           "Chồng từ nhấn mạnh. Giữ một từ, hoặc đưa số liệu"),
     # 3. Văn dịch từ tiếng Anh
     _rule(TRANSLATED, _words(r"được(?: \w+){1,3} bởi"), "Bị động kiểu tiếng Anh. Viết: do X làm / X làm ra"),
+    _rule(TRANSLATED, _words(r"bị(?: \w+){1,3} bởi"), "Bị động kiểu tiếng Anh. Viết chủ động: X kiện OpenAI"),
     _rule(TRANSLATED, _sentence_start(r"việc"), "Bỏ \"việc\" đầu câu, dùng thẳng động từ"),
     _rule(TRANSLATED, _words(r"trong việc"), "Thường bỏ được \"trong việc\""),
     _rule(TRANSLATED, _words(r"một cách \w+"), "\"một cách nhanh chóng\" thành \"nhanh\""),
@@ -111,11 +128,34 @@ RULES: List[Rule] = [
     _rule(TRANSLATED, _words(r"có khả năng"), "Viết \"được\", \"có thể\", hoặc động từ trần"),
     _rule(TRANSLATED, _words(r"trở nên"), "Thường bỏ được \"trở nên\""),
     _rule(TRANSLATED, _words(r"giảm thiểu"), "Viết \"giảm\", \"bớt\""),
+    _rule(TRANSLATED, _words(r"đây là lý do (?:tại sao|vì sao)"), "Viết \"Vì vậy\", \"Thế nên\""),
+    _rule(TRANSLATED, _words(r"có (?:một số|nhiều) cách để"), "Có mấy cách thì nói luôn số"),
+    _rule(TRANSLATED, _words(r"ở mức độ cao"), "Viết \"rất\", \"nhiều\""),
+    _rule(TRANSLATED, _sentence_start(r"đối với (?:tôi|mình)"), "Viết \"Với mình\""),
+    _rule(TRANSLATED, _words(r"với sự (?:hỗ trợ|giúp đỡ) của"), "Viết \"nhờ\", \"có X giúp\""),
+    _rule(TRANSLATED, _words(r"trong bối cảnh"), "Viết \"khi\", \"lúc\""),
+    _rule(TRANSLATED, _words(r"nhằm mục đích"), "Viết \"để\""),
+    _rule(TRANSLATED, _words(r"sự (?:phát triển|thay đổi|gia tăng|xuất hiện|ra đời) của"),
+          "Danh từ hóa kiểu tiếng Anh. Viết \"X phát triển\""),
+    _rule(TRANSLATED, _words(r"đóng góp vào"), "Viết \"giúp\""),
     # 4. Cấu trúc kiểu AI
     _rule(STRUCTURE, "(?P<hit>" + W + r"không (?:chỉ|những)" + E + r"[^.!?\n]{0,120}?" + W + r"mà còn" + E + ")",
           "Nói thẳng hai ý, hoặc chọn ý mạnh hơn"),
     _rule(STRUCTURE, _words(r"điều đáng chú ý là", r"một điều thú vị là", r"điều quan trọng là", r"đáng chú ý hơn"),
           "Nói luôn điều đó"),
+    _rule(STRUCTURE, _words(r"cần lưu ý (?:rằng|là)", r"điều quan trọng cần nhớ", r"không thể phủ nhận"),
+          "Câu dẫn thừa. Nói luôn điều đó"),
+    _rule(STRUCTURE, _sentence_start(r"nói cách khác", r"hãy tưởng tượng"), "Bỏ, hoặc kể tình huống thật"),
+    _rule(STRUCTURE, "(?P<hit>" + W + r"không phải (?:là )?[^.!?\n]{1,60}?, mà là" + E + ")",
+          "\"Không phải X, mà là Y\" dùng hoài thành kịch. Nói thẳng Y"),
+    _rule(STRUCTURE, _sentence_start(r"tin buồn cũng có", r"còn một tin (?:đáng lo|đáng chú ý|buồn) hơn",
+                                     r"(?:nhưng )?đó chưa phải (?:là )?tất cả"),
+          "Câu chuyển ý công thức. Bỏ, nối thẳng vào chuyện"),
+    _rule(STRUCTURE, _words(r"đây (?:cũng )?là (?:một )?lời nhắc", r"bài học rút ra(?: ở đây)? là"),
+          "Câu kết bài học thêm cho tròn bài. Hết ý thì dừng"),
+    _rule(STRUCTURE, "(?P<hit>" + W + r"không phải (?:là )?[^.!?\n]{1,40}[.!?]\s+[^.!?\n]{1,80}?" + W + r"mới là" + E + ")",
+          "Lật ngược kiểu \"Không phải X. Y mới là...\" nghe kịch. Nói thẳng Y"),
+    _rule(STRUCTURE, _words(r"câu trả lời là:"), "Giật gân bằng dấu hai chấm. Nói thẳng câu trả lời"),
     _rule(STRUCTURE, _words(r"có thể phần nào", r"phần nào giúp"), "Rào đón quá đà. Viết \"giúp được\""),
     # 5. Trình bày
     _rule(FORMAT, r"(?P<hit>—|(?<=\s)–(?=\s))", "Gạch dài giữa câu. Thay bằng dấu phẩy hoặc ngắt câu"),
@@ -124,9 +164,14 @@ RULES: List[Rule] = [
     _rule(CHATBOT, _words(r"chắc chắn rồi", r"câu hỏi rất hay", r"bạn nói hoàn toàn đúng", r"dưới đây là",
                           r"sau đây (?:mình|tôi|chúng ta|chúng tôi) sẽ", r"đừng ngần ngại", r"xin chào (?:các bạn|mọi người)"),
           "Xóa"),
+    _rule(CHATBOT, _sentence_start(r"tuyệt vời!"), "Xóa"),
+    _rule(CHATBOT, _words(r"(?:mình|tôi) hiểu cảm giác của bạn", r"h[yi] vọng điều (?:này|đó) (?:giúp ích|hữu ích|có ích)",
+                          r"nếu (?:bạn|anh chị|quý khách) có bất kỳ (?:câu hỏi|thắc mắc)",
+                          r"rất vui được (?:hỗ trợ|giúp đỡ|giúp)"),
+          "Câu xã giao của chatbot. Xóa, hoặc nói cụ thể"),
     _rule(CHATBOT, _words(r"chúng ta"), "Đang nói một chiều với người đọc thì đừng xưng \"chúng ta\""),
     # Sửa quá tay
-    _rule(OVERDONE, _words(r"khum", r"xỉu up xỉu down", r"keo lỳ", r"keo lì", r"u là trời"),
+    _rule(OVERDONE, _words(r"khum", r"xỉu up xỉu down", r"keo lỳ", r"keo lì", r"u là trời", r"đỉnh của chóp", r"mãi mận"),
           "Từ lóng Gen Z không ai xin. Bỏ, trừ khi người đọc là giới trẻ"),
 ]
 
@@ -144,6 +189,8 @@ PARTICLES = _compile(_words(r"nha", r"nhé", r"nè", r"á", r"hen", r"nhỉ"))
 EMOJI_LINE_START = _compile(r"^[ \t]*(?:[-*>][ \t]*)?(?P<hit>[\U0001F300-\U0001FAFF\u2600-\u27BF])")
 HEADING = _compile(r"^#{1,6}[ \t]+(?P<hit>.+)$")
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?…])\s+")
+# Số liệu đứng riêng (15.000, 20%, 50MP), không tính số dính sau chữ như tên máy X1
+NUMBER = re.compile(r"(?<![^\W\d_])\d")
 FENCE = re.compile(r"^\s*```")
 
 
@@ -173,6 +220,12 @@ def _paragraphs(text: str) -> Iterable[Tuple[int, str]]:
         yield m.start(), m.group(0)
 
 
+def _sentence_at(text: str, offset: int) -> str:
+    start = max(text.rfind(c, 0, offset) for c in ".!?…\n") + 1
+    ends = [i for i in (text.find(c, offset) for c in ".!?…\n") if i != -1]
+    return text[start:min(ends) if ends else len(text)]
+
+
 def _sentences(paragraph: str) -> List[str]:
     flat = re.sub(r"^[ \t]*>[ \t]?", "", paragraph, flags=re.MULTILINE).replace("\n", " ")
     return [s for s in SENTENCE_SPLIT.split(flat.strip()) if s]
@@ -193,6 +246,8 @@ def check(text: str, name: str = "<stdin>", voice: bool = False) -> List[Finding
 
     for rule in RULES + (VOICE_RULES if voice else []):
         for m in rule.pattern.finditer(scan):
+            if rule.skip_with_number and NUMBER.search(_sentence_at(scan, m.start("hit"))):
+                continue
             add_match(m, rule.group, rule.hint)
 
     connectors = list(CONNECTORS.finditer(scan))

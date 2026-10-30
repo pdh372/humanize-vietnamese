@@ -1,6 +1,6 @@
 ---
 name: humanize-vietnamese
-description: Viết hoặc viết lại tiếng Việt cho tự nhiên như người thật nói, bỏ "giọng AI" (sáo rỗng, dịch từ tiếng Anh, câu đều đều, trang trọng gượng). Dùng khi người dùng viết/sửa văn tiếng Việt và muốn nó mượt, có hồn, "chơn chu", "giọng người", "đỡ AI", hoặc khi soạn caption, bài đăng Facebook/TikTok, kịch bản voice, tin nhắn, email, mô tả sản phẩm bằng tiếng Việt. Also use for any request to humanize, de-AI, or make Vietnamese text sound natural.
+description: Viết hoặc viết lại tiếng Việt cho tự nhiên như người thật nói, bỏ "giọng AI" (sáo rỗng, dịch từ tiếng Anh, câu đều đều, trang trọng gượng). Dùng khi người dùng viết/sửa văn tiếng Việt và muốn nó mượt, có hồn, "chơn chu", "giọng người", "đỡ AI", khi cần đổi văn phong (đời thường, cà khịa, kể chuyện, giải thích, chuyên nghiệp, học thuật, thuyết phục, châm biếm...), hoặc khi soạn caption, bài đăng Facebook/TikTok, kịch bản voice, tin nhắn, email, mô tả sản phẩm bằng tiếng Việt. Also use for any request to humanize, de-AI, or make Vietnamese text sound natural.
 ---
 
 # Humanize Vietnamese
@@ -9,11 +9,11 @@ Viết tiếng Việt như một người Việt thật đang nói hoặc viết
 
 ## Quy trình
 
-1. **Chốt bối cảnh trước khi viết.** Ai đọc/nghe, đăng ở đâu, giọng gì, xưng hô gì. Người dùng không nói thì dùng mặc định bên dưới, không hỏi lại trừ khi thật sự mơ hồ (ví dụ không biết là gửi sếp hay gửi bạn).
+1. **Chốt bối cảnh trước khi viết.** Ai đọc/nghe, đăng ở đâu, văn phong gì, xưng hô gì. Người dùng không nói thì dùng mặc định bên dưới, không hỏi lại trừ khi thật sự mơ hồ (ví dụ không biết là gửi sếp hay gửi bạn).
 2. **Viết hoặc viết lại.** Giữ đúng số liệu, tên riêng, ý chính. Không bịa trải nghiệm cá nhân ("mình xài rồi", "hôm qua mình thử") nếu người dùng không cung cấp.
 3. **Soát lỗi giọng AI** theo [references/ai-tells.md](references/ai-tells.md). Sửa hết những gì khớp. Nếu chạy được lệnh, lưu bản nháp ra file tạm rồi chạy `python3 <thư mục skill này>/scripts/check_ai_tells.py <file>` (thêm `--voice` nếu là văn đọc thành tiếng) để quét nhanh. Script chỉ gợi ý: chỗ nào nó bắt mà đúng ý người dùng (ví dụ họ muốn giữ "chúng ta") thì giữ. Script sạch chưa có nghĩa là xong, vẫn làm bước 4.
 4. **Đọc thầm một lượt.** Câu nào đọc vấp, câu nào ngoài đời không ai nói vậy thì viết lại.
-5. **Trả kết quả.** Chỉ đưa văn bản cuối. Không giải thích đã sửa gì trừ khi được hỏi. Người dùng xin nhiều phiên bản thì đưa 2-3 bản khác giọng rõ rệt, không phải 3 bản na ná nhau.
+5. **Trả kết quả.** Chỉ đưa văn bản cuối. Không giải thích đã sửa gì trừ khi được hỏi. Người dùng xin nhiều phiên bản thì đưa 2-3 bản khác giọng rõ rệt (ví dụ mỗi bản một văn phong), không phải 3 bản na ná nhau.
 
 ## Mặc định
 
@@ -21,6 +21,7 @@ Viết tiếng Việt như một người Việt thật đang nói hoặc viết
 |---|---|
 | Xưng hô | mình - bạn |
 | Giọng | thân thiện, gọn, hơi đời thường |
+| Văn phong | đời thường; viết hướng dẫn thì giải thích, email công việc thì chuyên nghiệp |
 | Vùng miền | trung tính, dùng được cả Bắc lẫn Nam |
 | Tiếng Anh | giữ thuật ngữ dân trong nghề hay nói (prompt, deploy, bug, livestream), không chen tiếng Anh vô cớ |
 
@@ -57,6 +58,12 @@ Tự nhiên không có nghĩa là suồng sã. Chọn đúng mức theo người
 
 Ở mức nào cũng bỏ lỗi giọng AI. Văn trang trọng của người thật vẫn rõ ràng và cụ thể.
 
+## Văn phong
+
+Độ trang trọng là nói với ai, văn phong là nói để làm gì: cho người ta cười, hiểu, tin, hay làm theo. Có 10 kiểu hay gặp: đời thường, hài hước cà khịa, kể chuyện, giải thích, phân tích lập luận, chuyên nghiệp, học thuật, cảm xúc, thuyết phục, châm biếm mỉa mai.
+
+Người dùng nêu kiểu nào thì dùng kiểu đó. Không nêu thì tự chọn theo mục "Chọn văn phong" trong [references/styles.md](references/styles.md): viết lại thì giữ văn phong gốc, viết mới thì chọn theo mục đích rồi chỉnh theo nơi đăng. Đọc mục của kiểu đã chọn trong file đó trước khi viết. Một bài trộn tối đa hai kiểu.
+
 ## Vùng miền
 
 Chỉ dùng khi người dùng yêu cầu hoặc văn gốc đã có. Dùng nhẹ tay, vài từ là đủ ra chất, đừng biến thành giọng hài nhại.
@@ -74,7 +81,7 @@ Khi văn bản sẽ được đọc thành tiếng (TTS, lồng tiếng, TikTok,
 Làm "người" quá cũng lộ. Các lỗi hay gặp khi cố humanize:
 
 - Nhét tiểu từ vào mọi câu ("nha", "nè", "á" liên tục)
-- Từ lóng Gen Z không ai xin ("khum", "xỉu up xỉu down", "keo lỳ") trong văn không phải để giới trẻ đọc
+- Từ lóng Gen Z không ai xin ("khum", "xỉu up xỉu down", "keo lỳ", "đỉnh của chóp", "mãi mận") trong văn không phải để giới trẻ đọc
 - Thêm câu cảm thán và emoji cho "vui"
 - Bịa kỷ niệm, trải nghiệm để có vẻ chân thật
 - Đổi luôn ý hoặc bỏ dữ kiện của người dùng cho câu mượt hơn
